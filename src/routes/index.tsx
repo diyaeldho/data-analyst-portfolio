@@ -230,7 +230,7 @@ function Index() {
           <SectionHead n="03" title="Projects" />
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((p) => (
-              <article key={p.title} className={`rounded-md border bg-card p-6 ${p.featured ? "md:col-span-2 border-primary" : ""}`}>
+              <article key={p.title} className={`rounded-md border bg-card p-6 shadow-sm ${p.featured ? "md:col-span-2 border-primary" : ""}`}>
                 <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs uppercase tracking-wider">
                   <span className="text-primary">{p.tag}</span>
                   {p.date && <span className="text-muted-foreground">{p.date}</span>}
@@ -250,7 +250,7 @@ function Index() {
           <SectionHead n="04" title="Education" />
           <div className="grid gap-6 md:grid-cols-2">
             {education.map((ed) => (
-              <div key={ed.degree} className={`rounded-md border bg-card p-6 ${ed.span ? "md:col-span-2" : ""}`}>
+              <div key={ed.degree} className={`rounded-md border bg-card p-6 shadow-sm ${ed.span ? "md:col-span-2" : ""}`}>
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <p className="font-mono text-xs uppercase tracking-wider text-primary">{ed.status}</p>
                   {ed.score && <p className="font-mono text-xs text-muted-foreground">{ed.score}</p>}
