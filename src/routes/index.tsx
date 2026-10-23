@@ -119,6 +119,33 @@ const projects = [
   },
 ];
 
+const education = [
+  {
+    status: "Postgraduate",
+    degree: "Master of Business Administration",
+    field: "Logistics and Supply Chain Management · Finance",
+    org: "SRM Institute of Science and Technology",
+    score: "CGPA 8.6 / 10",
+    span: false,
+  },
+  {
+    status: "Undergraduate",
+    degree: "Bachelor of Commerce",
+    field: "Computer Applications",
+    org: "Rajagiri College of Management and Applied Sciences",
+    score: "CGPA 6.37 / 10",
+    span: false,
+  },
+  {
+    status: "In progress",
+    degree: "Data Analytics Course",
+    field: "Excel, Power BI, SQL/MySQL, data cleaning, reporting and business intelligence",
+    org: "",
+    score: "",
+    span: true,
+  },
+];
+
 function SectionHead({ n, title }: { n: string; title: string }) {
   return (
     <div className="mb-10 flex items-baseline gap-4 border-b border-foreground/80 pb-3">
@@ -219,16 +246,17 @@ function Index() {
         <section id="education" className="scroll-mt-20 pb-20">
           <SectionHead n="04" title="Education" />
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-md border bg-card p-6">
-              <p className="font-mono text-xs uppercase tracking-wider text-primary">In progress</p>
-              <h3 className="mt-3 font-display text-3xl">Data Analytics Course</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Excel, Power BI, SQL/MySQL, data cleaning, reporting and business intelligence.</p>
-            </div>
-            <div className="rounded-md border bg-card p-6">
-              <p className="font-mono text-xs uppercase tracking-wider text-primary">Postgraduate</p>
-              <h3 className="mt-3 font-display text-3xl">MBA — Finance & Logistics</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Dual specialisation in financial management and logistics & supply chain operations.</p>
-            </div>
+            {education.map((ed) => (
+              <div key={ed.degree} className={`rounded-md border bg-card p-6 ${ed.span ? "md:col-span-2" : ""}`}>
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="font-mono text-xs uppercase tracking-wider text-primary">{ed.status}</p>
+                  {ed.score && <p className="font-mono text-xs text-muted-foreground">{ed.score}</p>}
+                </div>
+                <h3 className="mt-3 font-display text-3xl">{ed.degree}</h3>
+                <p className="mt-1 text-sm font-medium">{ed.field}</p>
+                {ed.org && <p className="mt-2 text-sm text-muted-foreground">{ed.org}</p>}
+              </div>
+            ))}
           </div>
         </section>
 
