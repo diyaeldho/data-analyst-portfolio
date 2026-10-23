@@ -151,7 +151,7 @@ const education = [
 
 function SectionHead({ n, title }: { n: string; title: string }) {
   return (
-    <div className="mb-10 flex items-baseline gap-4 border-b border-foreground/80 pb-3">
+    <div className="mb-10 flex items-baseline gap-4 border-b border-foreground/20 pb-3">
       <span className="font-mono text-sm text-primary">{n}</span>
       <h2 className="font-display text-4xl md:text-5xl">{title}</h2>
     </div>
@@ -264,7 +264,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="contact" className="scroll-mt-20 border-t border-foreground/80 py-20 text-center">
+        <section id="contact" className="scroll-mt-20 border-t border-border py-20 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">05 — Contact</p>
           <h2 className="mt-4 font-display text-5xl md:text-7xl">Let's work with data.</h2>
           <div className="mt-8 flex flex-col items-center gap-3 font-mono text-sm">
