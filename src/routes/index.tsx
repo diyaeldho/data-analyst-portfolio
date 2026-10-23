@@ -151,7 +151,7 @@ const education = [
 
 function SectionHead({ n, title }: { n: string; title: string }) {
   return (
-    <div className="mb-10 flex items-baseline gap-4 border-b border-foreground/80 pb-3">
+    <div className="mb-10 flex items-baseline gap-4 border-b border-foreground/20 pb-3">
       <span className="font-mono text-sm text-primary">{n}</span>
       <h2 className="font-display text-4xl md:text-5xl">{title}</h2>
     </div>
@@ -161,7 +161,7 @@ function SectionHead({ n, title }: { n: string; title: string }) {
 function Index() {
   return (
     <div className="min-h-screen">
-      <nav className="sticky top-0 z-10 border-b bg-background/90 backdrop-blur">
+      <nav className="sticky top-0 z-10 border-b border-border bg-background">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <a href="#top" className="font-display text-2xl">Dhiya Eldho</a>
           <div className="hidden gap-6 font-mono text-xs uppercase tracking-wider text-foreground/85 sm:flex">
@@ -230,7 +230,7 @@ function Index() {
           <SectionHead n="03" title="Projects" />
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((p) => (
-              <article key={p.title} className={`rounded-md border bg-card p-6 ${p.featured ? "md:col-span-2 border-primary" : ""}`}>
+              <article key={p.title} className={`rounded-md border bg-card p-6 shadow-sm ${p.featured ? "md:col-span-2 border-primary" : ""}`}>
                 <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs uppercase tracking-wider">
                   <span className="text-primary">{p.tag}</span>
                   {p.date && <span className="text-muted-foreground">{p.date}</span>}
@@ -250,7 +250,7 @@ function Index() {
           <SectionHead n="04" title="Education" />
           <div className="grid gap-6 md:grid-cols-2">
             {education.map((ed) => (
-              <div key={ed.degree} className={`rounded-md border bg-card p-6 ${ed.span ? "md:col-span-2" : ""}`}>
+              <div key={ed.degree} className={`rounded-md border bg-card p-6 shadow-sm ${ed.span ? "md:col-span-2" : ""}`}>
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <p className="font-mono text-xs uppercase tracking-wider text-primary">{ed.status}</p>
                   {ed.score && <p className="font-mono text-xs text-muted-foreground">{ed.score}</p>}
@@ -264,7 +264,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="contact" className="scroll-mt-20 border-t border-foreground/80 py-20 text-center">
+        <section id="contact" className="scroll-mt-20 border-t border-border py-20 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">05 — Contact</p>
           <h2 className="mt-4 font-display text-5xl md:text-7xl">Let's work with data.</h2>
           <div className="mt-8 flex flex-col items-center gap-3 font-mono text-sm">
