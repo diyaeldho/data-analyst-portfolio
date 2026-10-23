@@ -126,6 +126,7 @@ const education = [
     field: "Logistics and Supply Chain Management · Finance",
     org: "SRM Institute of Science and Technology",
     score: "CGPA 8.6 / 10",
+    date: "",
     span: false,
   },
   {
@@ -134,14 +135,16 @@ const education = [
     field: "Computer Applications",
     org: "Rajagiri College of Management and Applied Sciences",
     score: "CGPA 6.37 / 10",
+    date: "",
     span: false,
   },
   {
     status: "In progress",
     degree: "Data Analytics Course",
     field: "Excel, Power BI, SQL/MySQL, data cleaning, reporting and business intelligence",
-    org: "",
+    org: "One Team Solutions",
     score: "",
+    date: "Jul 2026 – Nov 2026",
     span: true,
   },
 ];
@@ -255,6 +258,7 @@ function Index() {
                 <h3 className="mt-3 font-display text-3xl">{ed.degree}</h3>
                 <p className="mt-1 text-sm font-medium">{ed.field}</p>
                 {ed.org && <p className="mt-2 text-sm text-muted-foreground">{ed.org}</p>}
+                {ed.date && <p className="mt-2 font-mono text-xs text-muted-foreground">{ed.date}</p>}
               </div>
             ))}
           </div>
