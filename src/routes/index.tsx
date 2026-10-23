@@ -161,7 +161,7 @@ function SectionHead({ n, title }: { n: string; title: string }) {
 function Index() {
   return (
     <div className="min-h-screen">
-      <nav className="sticky top-0 z-10 border-b bg-background/90 backdrop-blur">
+      <nav className="sticky top-0 z-10 border-b border-border bg-background">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <a href="#top" className="font-display text-2xl">Dhiya Eldho</a>
           <div className="hidden gap-6 font-mono text-xs uppercase tracking-wider text-foreground/85 sm:flex">
