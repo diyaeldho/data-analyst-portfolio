@@ -164,7 +164,7 @@ function Index() {
       <nav className="sticky top-0 z-10 border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <a href="#top" className="font-display text-2xl">Dhiya Eldho</a>
-          <div className="hidden gap-6 font-mono text-xs uppercase tracking-wider text-muted-foreground sm:flex">
+          <div className="hidden gap-6 font-mono text-xs uppercase tracking-wider text-foreground/85 sm:flex">
             <a href="#experience" className="hover:text-primary">Experience</a>
             <a href="#projects" className="hover:text-primary">Projects</a>
             <a href="#education" className="hover:text-primary">Education</a>
